@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Video Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>動画変換ツール</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file">ファイルを選択:</label>
+        <input type="file" id="file" name="file" required><br><br>
+        
+        <label for="format">変換フォーマット:</label>
+        <select id="format" name="format">
+            <option value="mp4">MP4</option>
+            <option value="mov">MOV</option>
+            <option value="avi">AVI</option>
+            <option value="mkv">MKV</option>
+            <option value="webm">WEBM</option>
+            <option value="flv">FLV</option>
+            <option value="mp3">MP3</option>
+        </select><br><br>
+        
+        <input type="submit" value="変換">
+    </form>
+</body>
+</html>
